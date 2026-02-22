@@ -1,0 +1,374 @@
+<!-- Hero Section with Slideshow -->
+<section id="home" class="relative flex items-start justify-center pt-20" style="min-height: 100vh;">
+    <!-- Background Slideshow -->
+    <div id="heroSlideshow" class="absolute inset-0 mt-20">
+        <div class="hero-slide active bg-cover bg-center bg-no-repeat"
+             style="background-image: url('<%- url_for('/images/old-site-images/bdd35b_5f5ff62020374f1db7402794a18a77d0~mv2.jpg') %>'); background-position: top center;"></div>
+        <div class="hero-slide bg-cover bg-center bg-no-repeat"
+             style="background-image: url('<%- url_for('/images/old-site-images/bdd35b_47df2a13b744453e913cd6efdbe6d7cb~mv2.jpg') %>'); background-position: center center;"></div>
+        <div class="hero-slide bg-cover bg-center bg-no-repeat"
+             style="background-image: url('<%- url_for('/images/old-site-images/bdd35b_07e559de8d6d4793a587f3669eccb6dc~mv2.jpg') %>'); background-position: center center;"></div>
+        <div class="hero-slide bg-cover bg-center bg-no-repeat"
+             style="background-image: url('<%- url_for('/images/old-site-images/bdd35b_7cfd4f8434e14ce9acc3b619050460b8~mv2.jpg') %>'); background-position: center center;"></div>
+    </div>
+    <div class="absolute inset-0 mt-20 bg-black opacity-20"></div>
+    <div class="relative z-10 text-center text-white px-4 mt-48">
+        <h1 class="text-4xl md:text-6xl font-bold mb-8 font-merriweather tracking-wider leading-tight">Heal Together, Stronger After</h1>
+        <!-- Slide Caption -->
+        <div id="slideCaption" class="text-lg md:text-2xl mb-6 font-medium opacity-90"></div>
+        <a href="#mission"
+            class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg transform hover:scale-105">Our
+            Mission</a>
+    </div>
+</section>
+
+<style>
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const captionElement = document.getElementById('slideCaption');
+    let currentSlide = 0;
+
+    // Captions for each slide
+    const captions = [
+        '愛•無窮 Love • Infinite',
+        '南區夜繽紛慈善攤位',
+        '送暖贈送福袋給獨居老人',
+        '派飯送暖給露宿者'
+    ];
+
+    function updateCaption() {
+        if (captionElement) {
+            captionElement.textContent = captions[currentSlide];
+        }
+    }
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+        updateCaption();
+    }
+
+    // Initialize first caption
+    updateCaption();
+
+    // Change slide every 5 seconds
+    setInterval(nextSlide, 5000);
+});
+</script>
+
+<!-- Mission Section -->
+<section id="mission" class="py-24 bg-white relative">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-wide">忠信基金會的宗旨</h2>
+            <div class="w-32 h-1.5 bg-secondary mx-auto rounded-full"></div>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+            <div class="max-w-4xl text-lg md:text-xl leading-loose text-gray-700 space-y-8 font-light">
+                <p>
+                    忠信基金會的宗旨［貧］是資源缺乏，［窮］ 沒有出路。本會旨在推廣關愛文化，以愛提供資源，用愛共尋出路，將 <span
+                        class="font-bold text-secondary">[愛•無窮]</span> 的信念傳遞到每個社區。
+                </p>
+                <p>
+                    本會致力幫助面對疫後復康的低收入家庭，成員彼此支持，自力更生，一同走出困局。
+                </p>
+                <p class="italic text-gray-500">
+                    Mission of Loyalty Foundation: [Poor] means a lack of resources, and [Poverty] means there is no
+                    way out. The Association aims to promote a culture of care, provide resources and find a way out
+                    with love, pass on the belief of [Love•Infinite] to every community.
+                </p>
+                <p class="italic text-gray-500">
+                    The association is committed to helping low-income families recovering from the epidemic. Members who support each other, become self-reliant, and get out of the woods.
+                </p>
+
+                <div class="border-t border-gray-200 pt-6 mt-6">
+                    <p class="font-medium text-gray-800">
+                        ​本會非常需要大家點讚支持，請大家積極分享本會的宗旨和連結，令我們能為需要者提供及時和適切的支援。感激各位鼎力支持！​
+                    </p>
+                    <p class="italic text-gray-500 mt-2">
+                        The Loyalty Foundation needs your support. Please actively share the purpose and links of our organization, so that we can serve those in need with the timely and appropriate help. Thank you all for your strong support!​​
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg mt-6 text-sm">
+                    <h4 class="font-bold text-gray-800 mb-4 text-base">怎樣捐款：How to donate?</h4>
+
+                    <div class="mb-6">
+                        <p><strong>忠信基金會 Loyalty Foundation Limited</strong></p>
+                        <p>中國銀行 Bank of China (Hong Kong) acc no.: <span class="text-primary font-bold">012-611-2-044547-4</span></p>
+                        <p>FPS Code 轉數快: <span class="text-primary font-bold">110539434</span></p>
+                    </div>
+
+                    <div class="border-t border-gray-300 pt-4 mb-4">
+                        <p class="font-semibold text-gray-800 mb-2">加密貨幣捐款 Cryptocurrency Donation</p>
+                        <p class="text-gray-600 mb-3">我們接受加密貨幣捐款。掃描以下QR碼即可捐款。</p>
+                        <p class="text-gray-600 italic mb-3">We accept cryptocurrency donations. Scan the QR code below to donate.</p>
+                    </div>
+
+                    <img src="<%- url_for('/images/old-site-images/QR code.jpg') %>" alt="QR Code for Donation" class="max-h-64 w-auto mx-auto mt-4 rounded-lg shadow-md">
+
+                    <div class="mt-4 pt-4 border-t border-gray-300">
+                        <p class="mt-2">慈善機構免稅編號: 91/18718</p>
+                        <p>義務工作發展局。機構會員號碼: CM000675</p>
+                    </div>
+
+                    <div class="mt-4 flex flex-col space-y-1">
+                        <a href="https://www.facebook.com/loyaltyfoundationhk/" target="_blank" class="text-primary hover:underline">Facebook: Loyalty Foundation</a>
+                        <a href="mailto:info@loyalty-foundation.org" class="text-primary hover:underline">Email: info@loyalty-foundation.org</a>
+                        <span>Contact: +852 5274 5160</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-24 bg-light">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-wide font-merriweather">Our Projects</h2>
+            <div class="w-32 h-1.5 bg-secondary mx-auto rounded-full"></div>
+            <p class="mt-6 text-xl text-gray-600 font-merriweather">Serving the Community with Love and Dedication</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Cards -->
+            <%
+            const services = [
+                {
+                    title: '忠信送暖到山區2026',
+                    desc: '為山區居民送上溫暖與關懷。Warmth to the Mountains 2026. Bringing warmth and care to residents in mountainous regions.',
+                    img: '/images/mountains-2026/IMG-20251120-WA0060.jpg',
+                    url: '/services/warmth-to-mountains-2026.html'
+                },
+                {
+                    title: '手針講座',
+                    desc: '推廣傳統治療方法，促進社區健康。Acupuncture Seminars. Promoting traditional healing methods for community health.',
+                    img: '/images/old-site-images/bdd35b_07c738b0e91941efbfa3db769dfd5e56~mv2.jpg',
+                    url: '/services/acupuncture-seminar.html'
+                },
+                {
+                    title: '五星級大廚',
+                    desc: '為有需要人士提供烹飪培訓和食物派發。5-Star Chef Program. Culinary training and food distribution for the needy.',
+                    img: '/images/old-site-images/bdd35b_d11de4609f0b41b4b092820edfd2c59d~mv2.jpg',
+                    url: '/services/five-star-chef.html'
+                },
+                {
+                    title: '專案南區夜繽紛慈善攤位',
+                    desc: '在南區夜市舉辦慈善攤位，回饋社區。Charity Stalls. Engaging the community in Southern District night markets.',
+                    img: '/images/old-site-images/bdd35b_47df2a13b744453e913cd6efdbe6d7cb~mv2.jpg',
+                    url: '/services/southern-district-charity-stall.html'
+                },
+                {
+                    title: '送暖贈送福袋給獨居老人',
+                    desc: '為獨居長者送上溫暖和必需品福袋。Gift Bags for Elderly. Delivering warmth and essentials to solitary seniors.',
+                    img: '/images/old-site-images/bdd35b_07e559de8d6d4793a587f3669eccb6dc~mv2.jpg',
+                    url: '/services/elderly-gift-bags.html'
+                },
+                {
+                    title: '派飯送暖給露宿者',
+                    desc: '為露宿者提供熱食，傳遞溫暖。Meal Distribution. Providing hot meals to the homeless.',
+                    img: '/images/old-site-images/bdd35b_7cfd4f8434e14ce9acc3b619050460b8~mv2.jpg',
+                    url: '/services/homeless-meal-distribution.html'
+                },
+                {
+                    title: '黃大仙中信綠光二手衣物回收環保活動',
+                    desc: '與中信綠光合作舉辦二手衣物回收環保活動，推動循環經濟,讓愛心衣物重獲新生。Clothing Recycling. Second-hand clothing recycling campaign promoting environmental sustainability.',
+                    img: '/images/huangdaxian-clothing-recycling-2025/IMG-20250605-WA0220.jpg',
+                    url: '/services/clothing-recycling-2025.html'
+                },
+                {
+                    title: '忠信長洲健康講座',
+                    desc: '在長洲舉辦健康講座，邀請專業醫護人員提供健康知識，守護社區健康。Health Seminar. Professional health talks in Cheung Chau promoting community wellness.',
+                    img: '/images/cheung-chau-health-seminar-2025/IMG-20250625-WA0027.jpg',
+                    url: '/services/cheung-chau-health-seminar-2025.html'
+                },
+                {
+                    title: '忠信x北區新社聯合辦運用中醫治未病健康講座',
+                    desc: '與北區新社聯合舉辦中醫治未病講座，弘揚中醫養生智慧，傳授預防保健知識。TCM Preventive Health. Traditional Chinese Medicine seminar on disease prevention.',
+                    img: '/images/north-district-tcm-health-seminar-2025/IMG_20251014_113052.jpg',
+                    url: '/services/north-district-tcm-health-seminar-2025.html'
+                },
+                {
+                    title: '忠信x藏霞精舍義診派福在北區',
+                    desc: '與藏霞精舍攜手舉辦義診派福活動，提供免費中西醫診療服務並派發福袋。Charity Clinic. Free medical services and blessing distribution in North District.',
+                    img: '/images/north-district-charity-clinic-2025/IMG_20251014_132510.jpg',
+                    url: '/services/north-district-charity-clinic-2025.html'
+                }
+            ];
+            services.forEach(service => { %>
+            <a href="<%- url_for(service.url) %>" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1 block">
+                <div class="h-48 bg-gray-200 bg-cover bg-center" style="background-image: url('<%- url_for(service.img) %>');"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2"><%= service.title %></h3>
+                    <p class="text-gray-600 mb-4"><%= service.desc %></p>
+                    <span class="text-primary font-medium hover:text-secondary">Read More →</span>
+                </div>
+            </a>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Columns Section -->
+<section id="columns" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-wide font-merriweather">欄目 Columns</h2>
+            <div class="w-32 h-1.5 bg-secondary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Column Items -->
+            <%
+            const columns = [
+                {
+                    title: '金融牌照及船舶服務公益支援中心',
+                    desc: '提供證監會牌照、合規顧問、盡職調查及船舶服務支援。Financial License & Vessel Services. Professional support for regulatory compliance and maritime operations.',
+                    img: '/images/WhatsApp Image 2025-12-29 at 15.13.56.jpeg',
+                    url: '/services/financial-maritime-support-center.html'
+                },
+                {
+                    title: '慈善帆船體驗日',
+                    desc: '專業導師指導學習航海知識，體驗帆船樂趣，支持慈善事業。Charity Sailing Experience. Professional sailing lessons supporting charitable causes.',
+                    img: '/images/Image_2025-12-29.jpeg',
+                    url: '/services/charity-sailing-experience.html'
+                },
+                {
+                    title: '公益AI粵語學習欄目',
+                    desc: '免費的粵語學習資源，推廣語言教育。AI Cantonese Learning. Free educational resources for language learning.',
+                    img: '/images/old-site-images/bdd35b_4b0abce3e7054fcc9ea8460ff9755bbc~mv2.png',
+                    url: '/services/ai-cantonese-learning.html'
+                },
+                {
+                    title: '玄學義工隊｜風水命理公益服務',
+                    desc: '為普羅大眾提供風水玄學服務，協助有緣人知所進退、改善身心。Mysticism Volunteer Service. Feng Shui and fortune-telling services for the community.',
+                    img: '/images/WhatsApp Image 2025-12-29 at 16.45.19.jpeg',
+                    url: '/services/fengshui-volunteer-service.html'
+                },
+                {
+                    title: '動物關愛與繪本計劃',
+                    desc: '支援流浪動物救助及絕育手術，並推廣愛護動物繪本教育。Animal Welfare & Picture Books. Supporting stray animal rescue, neutering programs, and animal welfare education through picture books.',
+                    img: '/images/2026-01-2416.29.14.jpeg',
+                    url: '/2026/01/24/animal-care-picture-book-initiative/'
+                }
+                // {
+                //     title: 'AI公益：長者健康AI助理',
+                //     desc: '運用人工智能技術為長者提供24小時健康咨詢服務。AI Health Assistant. 24/7 AI-powered health consultation for elderly care.',
+                //     img: '/images/AI/Image2025-10_25AM.jpeg',
+                //     url: '/services/ai-gong-yi-zhang-zhe-jian-kang-ai-zhu-li.html'
+                // }
+            ];
+            columns.forEach(column => { %>
+            <a href="<%- url_for(column.url) %>" class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1 block">
+                <div class="h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
+                    <img src="<%- url_for(column.img) %>" alt="<%= column.title %>" class="w-full h-full object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2"><%= column.title %></h3>
+                    <p class="text-gray-600 mb-4"><%= column.desc %></p>
+                    <span class="text-primary font-medium hover:text-secondary">Read More →</span>
+                </div>
+            </a>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 tracking-wide">Our Team</h2>
+            <div class="w-32 h-1.5 bg-secondary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+            <%
+            const team = [
+                {name: '林卓峰', role: '董事', nameEn: 'LAM CHEUK FUNG', img: '/images/old-site-images/WhatsApp%20Image%202023-10-18%20at%2011_01_00.jpeg'},
+                {name: '歐陽國健', role: '財務總監', nameEn: 'AUYEUNG KWOK KIN, STANLEY', img: '/images/old-site-images/WhatsApp%20Image%202024-03-11%20at%2011_01_18.jpeg'},
+                {name: '彭卓敏', role: '內部行政會計', nameEn: 'PANG CHEUK MAN', img: '/images/old-site-images/240_F_265794447_2sauB9L7rGqjeVbnrZmVjypt1ZgLO0pH.jpg'},
+                {name: '鄒紹忠', role: '行政總監', nameEn: 'CHOW SIU CHUNG, JIMMY', img: '/images/old-site-images/WhatsApp%20Image%202024-01-02%20at%2011_28_38.jpeg'},
+                {name: '黃偉明', role: '營運總監', nameEn: 'Wong Wai Ming, RAYMOND', img: '/images/old-site-images/WhatsApp%20Image%202024-03-11%20at%2011_00_57.jpeg'},
+                {name: '卓文傑', role: '執行總監', nameEn: '', img: '/images/old-site-images/WhatsApp%20Image%202025-07-21%20at%2021_15_11%20(1).jpeg'}
+            ];
+            team.forEach(member => { %>
+            <div class="p-6">
+                <div class="w-48 h-48 mx-auto rounded-full mb-6 flex items-center justify-center overflow-hidden shadow-lg">
+                    <% if (member.img) { %>
+                        <img src="<%- url_for(member.img) %>" alt="<%= member.name %>" class="object-cover w-full h-full">
+                    <% } else { %>
+                        <span class="text-5xl text-gray-400"><%= member.initial %></span>
+                    <% } %>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800"><%= member.name %></h3>
+                <p class="text-primary font-medium"><%= member.role %></p>
+                <% if (member.nameEn) { %><p class="text-gray-500 text-sm"><%= member.nameEn %></p><% } %>
+            </div>
+            <% }); %>
+        </div>
+
+        <!-- Special Thanks -->
+        <div class="mt-16 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">Special Thanks 特別感謝</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <%
+                const thanks = [
+                    {name: '經民聯田灣區賴家智區議員', nameEn: 'Lai Ka Chi, District Councilor'},
+                    {name: '林玉珍區議員', nameEn: 'Lam Yuk-chun, BBS, MH'},
+                    {name: '林順潮立法會議員', nameEn: 'Legislative Council Member Lam Shun-chiu'},
+                    {name: '梁子穎立法會議員', nameEn: 'Legislative Council Member Leung Tsz-wing'}
+                ];
+                thanks.forEach(person => { %>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="font-bold text-gray-800"><%= person.name %></p>
+                    <p class="text-sm text-gray-600"><%= person.nameEn %></p>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">Our Partners 我們的合作夥伴</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto items-center justify-center">
+                <%
+                const partners = [
+
+                    {name: 'Ninnan', img: '/images/old-site-images/ninnan.jpg'},
+                    {name: 'FTU', img: '/images/old-site-images/FTU.jpg'},
+                    {name: '香港製造業總會', img: '/images/old-site-images/香港製造業總會.jpg'},
+                    {name: '黃大仙區', img: '/images/old-site-images/wongtaishindistrict.png'},
+                    {name: '中國銀行', img: '/images/old-site-images/bochk.jpg'},
+                    {name: 'AVS', img: '/images/old-site-images/AVS.jpg'},
+                    {name: 'Time Auction', img: '/images/old-site-images/timeauction.jpg'},
+                    {name: '政府資助項目', img: '/images/old-site-images/governmentfundedprogram.jpg'},
+                    {name: '民政事務總署', img: '/images/old-site-images/homeaffairs.jpg'}
+                ];
+                partners.forEach(partner => { %>
+                <div class="p-4 flex items-center justify-center">
+                    <img src="<%- url_for(partner.img) %>" alt="<%= partner.name %>" class="max-h-24 w-auto object-contain">
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</section>

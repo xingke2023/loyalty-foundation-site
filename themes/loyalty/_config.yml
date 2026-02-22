@@ -1,0 +1,18 @@
+# Theme configuration
+menu:
+  Home: /
+  Services: /#services
+  About: /#about
+  Team: /#team
+  Contact: /#contact
+  Donate: /#donate
+
+# Social links
+social:
+  facebook: https://www.facebook.com/loyaltyfdn?mibextid=ZbWKwL
+
+# Footer
+footer:
+  copyright: "2023 by Loyalty Foundation. All rights reserved."
+  tax_no: "91/18718"
+  member_no: "CM000675"

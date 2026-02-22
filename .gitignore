@@ -1,0 +1,28 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+_multiconfig.yml
+
+# Backup files
+hexo-backup/
+*.bak
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

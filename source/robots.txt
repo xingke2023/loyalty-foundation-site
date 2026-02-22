@@ -1,0 +1,8 @@
+# robots.txt for Loyalty Foundation
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.loyalty-foundation.org/sitemap.xml

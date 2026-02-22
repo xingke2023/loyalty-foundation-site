@@ -1,0 +1,107 @@
+<!-- Header -->
+<header class="bg-white bg-opacity-95 shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="/images/logo.jpeg" alt="Loyalty Foundation Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <div class="flex flex-col">
+                    <span class="text-3xl font-bold text-primary tracking-wide leading-none">忠信基金會</span>
+                    <span class="block text-base font-normal text-gray-600">LOYALTY FOUNDATION</span>
+                </div>
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+            <a href="/" class="text-gray-600 hover:text-primary transition duration-300 text-lg font-medium tracking-wide">
+                <span class="block">首頁</span>
+                <span class="block text-sm text-gray-500">Home</span>
+            </a>
+            <a href="/#mission" class="text-gray-600 hover:text-primary transition duration-300 text-lg font-medium tracking-wide">
+                <span class="block">使命</span>
+                <span class="block text-sm text-gray-500">Mission</span>
+            </a>
+            <a href="/#projects" class="text-gray-600 hover:text-primary transition duration-300 text-lg font-medium tracking-wide">
+                <span class="block">項目</span>
+                <span class="block text-sm text-gray-500">Projects</span>
+            </a>
+            <a href="/#columns" class="text-gray-600 hover:text-primary transition duration-300 text-lg font-medium tracking-wide">
+                <span class="block">專欄</span>
+                <span class="block text-sm text-gray-500">Columns</span>
+            </a>
+            <a href="/#team" class="text-gray-600 hover:text-primary transition duration-300 text-lg font-medium tracking-wide">
+                <span class="block">團隊</span>
+                <span class="block text-sm text-gray-500">Team</span>
+            </a>
+            <a href="/#contact" class="text-gray-600 hover:text-primary transition duration-300 text-lg font-medium tracking-wide">
+                <span class="block">聯絡</span>
+                <span class="block text-sm text-gray-500">Contact</span>
+            </a>
+        </nav>
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+        <nav class="flex flex-col items-center space-y-4 py-4">
+            <a href="/" class="text-gray-800 hover:text-primary transition duration-300 text-lg font-medium tracking-wide text-center">
+                <span class="block">首頁</span>
+                <span class="block text-sm text-gray-500">Home</span>
+            </a>
+            <a href="/#mission" class="text-gray-800 hover:text-primary transition duration-300 text-lg font-medium tracking-wide text-center">
+                <span class="block">使命</span>
+                <span class="block text-sm text-gray-500">Mission</span>
+            </a>
+            <a href="/#projects" class="text-gray-800 hover:text-primary transition duration-300 text-lg font-medium tracking-wide text-center">
+                <span class="block">項目</span>
+                <span class="block text-sm text-gray-500">Projects</span>
+            </a>
+            <a href="/#columns" class="text-gray-800 hover:text-primary transition duration-300 text-lg font-medium tracking-wide text-center">
+                <span class="block">專欄</span>
+                <span class="block text-sm text-gray-500">Columns</span>
+            </a>
+            <a href="/#team" class="text-gray-800 hover:text-primary transition duration-300 text-lg font-medium tracking-wide text-center">
+                <span class="block">團隊</span>
+                <span class="block text-sm text-gray-500">Team</span>
+            </a>
+            <a href="/#contact" class="text-gray-800 hover:text-primary transition duration-300 text-lg font-medium tracking-wide text-center">
+                <span class="block">聯絡</span>
+                <span class="block text-sm text-gray-500">Contact</span>
+            </a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Toggle mobile menu when button is clicked
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when any menu link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Close mobile menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnButton = mobileMenuButton.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnButton && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
