@@ -304,22 +304,23 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             <%
             const team = [
+                {name: '鄒紹忠', role: '主席 Chairman', nameEn: 'Jimmy CHOW', img: '/images/jimmy-chow.jpeg', imgPosition: 'center 26%'},
                 {name: '林卓峰', role: '董事', nameEn: 'LAM CHEUK FUNG', img: '/images/old-site-images/WhatsApp%20Image%202023-10-18%20at%2011_01_00.jpeg'},
-                {name: '鄒紹忠', role: '主席 Chairman', nameEn: 'Jimmy Chow', img: '/images/old-site-images/WhatsApp%20Image%202024-01-02%20at%2011_28_38.jpeg'},
-                {name: '歐陽國健', role: '財務總監', nameEn: 'AUYEUNG KWOK KIN, STANLEY', img: '/images/old-site-images/WhatsApp%20Image%202024-03-11%20at%2011_01_18.jpeg'},
-                {name: '彭卓敏', role: '內部行政會計', nameEn: 'PANG CHEUK MAN', img: '/images/old-site-images/240_F_265794447_2sauB9L7rGqjeVbnrZmVjypt1ZgLO0pH.jpg'},
-                {name: '黃偉明', role: '顧問', nameEn: 'Wong Wai Ming, RAYMOND', img: '/images/old-site-images/WhatsApp%20Image%202024-03-11%20at%2011_00_57.jpeg'},
-                {name: '卓文傑', role: '執行總監', nameEn: '', img: '/images/old-site-images/WhatsApp%20Image%202025-07-21%20at%2021_15_11%20(1).jpeg'},
-                {name: '黎家鑫', role: '執行委員 Executive Committee Member', nameEn: 'Yamm Lai', img: '', initial: '黎'},
-                {name: '霍柏宇', role: '執行委員 Executive Committee Member', nameEn: 'Billy Fok', img: '', initial: '霍'},
-                {name: '劉美寶', role: '義務發展總監 Honorary Director of Development', nameEn: 'Mabel Lau', img: '', initial: '劉'},
-                {name: '米曉兵', role: '科技顧問', nameEn: 'Xiaobing Mi, Mike', img: '/images/old-site-images/WechatIMG429.jpg', initial: '米'}
+                {name: '歐陽國健', role: '行政秘書 Admin. Secretary', nameEn: 'Stanley AU-YEUNG', img: '/images/stanley-auyeung.jpeg'},
+                {name: '彭卓敏', role: '行政及會計 Admin. & Accountant', nameEn: 'PANG Cheuk Man', img: '/images/old-site-images/240_F_265794447_2sauB9L7rGqjeVbnrZmVjypt1ZgLO0pH.jpg'},
+                {name: '黃偉明', role: '名譽教育顧問 Hon. Education Consultant', nameEn: 'Raymond WONG', img: '/images/raymond-wong.jpeg', imgPosition: 'center 23%'},
+                {name: '卓文傑', role: '執行總監 Executive Director', nameEn: 'Harry CHEUK', img: '/images/harry-cheuk.jpeg', imgPosition: 'center 26%'},
+                {name: '黎家鑫', role: '執行委員 ExCo Member', nameEn: 'Yamm LAI', img: '/images/yamm-lai.jpeg', imgPosition: 'center 23%'},
+                {name: '霍柏宇', role: '執行委員 ExCo Member', nameEn: 'Billy FOK', img: '/images/billy-fok.jpeg', imgPosition: 'center 26%'},
+                {name: '劉美寶', role: '名譽發展顧問 Hon. Development Advisor', nameEn: 'Mabel LAU', img: '/images/mabel-lau.jpeg'},
+                {name: '岑朗峯', role: '執行委員 ExCo Member', nameEn: 'Jackal SHAM', img: '/images/jackal-sham.jpeg', imgPosition: 'center 26%'},
+                {name: '米曉兵', role: '名譽科技顧問 Hon. IT Consultant', nameEn: 'Mike MI', img: '/images/old-site-images/WechatIMG429.jpg', initial: '米'}
             ];
             team.forEach(member => { %>
             <div class="p-6">
-                <div class="w-48 h-48 mx-auto rounded-full mb-6 flex items-center justify-center overflow-hidden shadow-lg">
+                <div class="w-48 h-48 mx-auto rounded-full mb-6 flex items-center justify-center overflow-hidden shadow-lg bg-gray-200">
                     <% if (member.img) { %>
-                        <img src="<%- url_for(member.img) %>" alt="<%= member.name %>" class="object-cover w-full h-full">
+                        <img src="<%- url_for(member.img) %>" alt="<%= member.name %>" style="width:100%;height:100%;object-fit:cover;display:block;object-position:<%= member.imgPosition || 'center center' %>;">
                     <% } else { %>
                         <span class="text-5xl text-gray-400"><%= member.initial %></span>
                     <% } %>
