@@ -1,19 +1,19 @@
 ---
-title: 玄學義工隊｜風水命理公益服務
+title: 身心靈健康義工隊｜風水命理公益服務
 date: 2025-12-29 16:00:00
-description: 玄學義工隊為普羅大眾提供風水玄學服務，協助有緣人知所進退、改善身心，讓更多有需要的人能得到玄學命理的指引。
+description: 忠信基金會－身心靈健康義工隊，以風水命理為文化與信仰層面的輔助工具，為基層、長者、災後群體及壓力較大人士提供情緒支持與生活調節服務。
 tags:
   - columns
 layout: service-page
 ---
 
-風水命理自古被稱為帝王之術，近幾十年亦彷彿是有錢人的專利，占卜算命收費高昂，貧苦大眾有時只能望門興嘆。
+忠信基金會－身心靈健康義工隊，以風水命理為文化與信仰層面的輔助工具，為基層、長者、災後群體及壓力較大人士提供情緒支持與生活調節服務。我們透過風水環境改善、命理解讀與正能量引導，協助受助者重建生活重心、減輕壓力，並與心理支援機構協作，提供更全面的身心靈關懷。
 
-然而，一般最需要風水命理服務的，往往就是經歷逆轉大變、身處谷底困局的平民百姓！
+Loyalty Foundation – Holistic Wellness Volunteer Team uses feng shui and metaphysical guidance as cultural and faith‑based support tools to provide emotional care and life adjustment services for underprivileged groups, the elderly, disaster‑affected communities and people under high stress. Through environmental feng shui improvement, birth‑chart reading and positive energy guidance, we help beneficiaries rebuild their life focus, reduce anxiety and restore inner stability, working alongside mental health organisations to deliver more comprehensive holistic care.
 
-玄師爺一生經歷大起大落，喺最近一次轉運時段，有緣深造玄學命理，深深體會到風水玄學對迷惘的人能提供重要嘅指引。
+風水命理自古被稱為帝王之術，近幾十年亦彷彿是有錢人的專利，占卜算命收費高昂，貧苦大眾有時只能望門興嘆。然而，一般最需要風水命理服務的，往往就是經歷逆轉大變、身處谷底困局的平民百姓！
 
-有見及此，玄師爺決定召集志同道合之士，組成玄學義工隊，為普羅大眾提供風水玄學服務。
+玄師爺一生經歷大起大落，喺最近一次轉運時段，有緣深造玄學命理，深深體會到風水玄學對迷惘的人能提供重要嘅指引。有見及此，玄師爺決定召集志同道合之士，組成身心靈健康義工隊，為普羅大眾提供風水玄學服務。
 
 <div class="mt-8">
     <img src="/images/WhatsApp Image 2025-12-29 at 16.45.19.jpeg" alt="玄學義工隊" class="rounded-lg shadow-md hover:shadow-xl transition duration-300 w-full">
